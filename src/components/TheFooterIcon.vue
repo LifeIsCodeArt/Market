@@ -11,7 +11,7 @@ const props = defineProps({
 
 
 <template>
-  <img :src="props.link" alt="">
+  <img :src="link.link" alt="">
 </template>
 
 <style scoped>

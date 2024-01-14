@@ -1,6 +1,6 @@
 <script setup>
 import TheFooterItem from '../components/TheFooterIcon.vue'
-import {useFooterItemsStore} from '../stores/FooterItems.js'
+import {useFooterItemsStore} from '../stores/FooterStore.js'
 import {computed} from "vue";
 
 const store = useFooterItemsStore()
@@ -31,7 +31,7 @@ const storeCards = computed(() => store.footerCards)
                 </div>
 
                 <div class="flex justify-between">
-                    <TheFooterItem v-for="icon in storeItems" :link="icon.link" :key="icon.id" class="h-[28px] w-[28px]"/>
+                    <TheFooterItem v-for="icon in storeItems" :link="icon" :key="icon.id" class="h-[28px] w-[28px]"/>
                 </div>
             </div>
 
@@ -214,7 +214,7 @@ const storeCards = computed(() => store.footerCards)
           </div>
 
           <div class=" w-[274px] flex justify-between items-center">
-              <TheFooterItem v-for="icon in storeCards" :link="icon.link" :key="icon.id" class="h-[20px] w-[64px]"/>
+              <TheFooterItem v-for="icon in storeCards" :link="icon" :key="icon.id" class="h-[20px] w-[64px]"/>
           </div>
         </div>
     </div>

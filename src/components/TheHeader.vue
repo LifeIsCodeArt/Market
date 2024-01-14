@@ -1,10 +1,10 @@
 <script setup>
  import TheHeaderItem from '../components/TheHeaderMenuItems.vue'
- import {useHeaderItemsStore} from '../stores/HeaderItems.js'
+ import {useHeaderItemsStore} from '../stores/HeaderStore.js'
  import {computed} from "vue";
 
  const store = useHeaderItemsStore()
- const storeItems = computed(() => store.count)
+ const storeItems = computed(() => store.headersItem)
 </script>
 
 
@@ -18,7 +18,7 @@
               </ul>
         </div>
 
-        <div class=" h-[58px] flex items-center justify-between mt-[8px] mb-[19px] px-[130px] border-b-2 border-b-gray-200">
+        <div class=" h-[58px] flex items-center justify-between mt-[8px] mb-[19px] mx-[130px] border-b-2 border-b-gray-200">
 
             <div class="flex items-center">
                 <img src="../assets/icons/header-icons/whatsapp.png" alt="" class="mr-[24px]">
@@ -31,13 +31,15 @@
 
             <div class="flex items-center">
 
-                <p class="mr-[48px] text-[20px] font-roboto text-[#333333]">
-                    О Компании
-                </p>
+              <RouterLink to="/about">
+                  <button class="mr-[48px] text-[20px] font-roboto font-bold text-[#333333]">
+                      О Компании
+                  </button>
+              </RouterLink>
 
-                <p class="text-[20px] font-roboto text-[#333333]">
+                <button class="text-[20px] font-roboto font-bold text-[#333333]">
                     Контакты
-                </p>
+                </button>
 
             </div>
 
@@ -51,7 +53,7 @@
             </button>
 
             <div class="ml-[20px] mr-[53px] flex h-[40px]">
-                <input type="text" placeholder="Найти любимые товары" class="w-[613px] pl-[16px] flex items-center">
+                <input type="text" placeholder="Найти любимые товары" class="w-[613px] pl-[16px] flex items-center border-[#4174CB] border rounded">
                 <button class="flex justify-center items-center w-[104px] bg-[#4174CB] text-white rounded">Найти</button>
             </div>
 

@@ -1,8 +1,9 @@
 <script setup>
   import TheFooterItem from '../components/TheFooterIcon.vue'
-  import HomePageTemplates from '../components/HomePageTemplates.vue'
-  import HomePageBenefits from '../components/HomePageBenefits.vue'
-  import {useHomePageItemsStore} from '../stores/HomePageItems.js'
+  import HomePageTemplates from '../components/HomePage/HomePageTemplates.vue'
+  import HomePageBenefits from '../components/HomePage/HomePageBenefits.vue'
+
+  import {useHomePageItemsStore} from '../stores/HomePageStore.js'
   import {computed} from "vue";
 
   const store = useHomePageItemsStore()
@@ -67,7 +68,7 @@
 
 
         <section class="mt-[136px] mb-[208px] pl-[130px] pr-[166px] grid grid-cols-3 gap-4">
-          <TheFooterItem v-for="item in pageCompanies" :link="item" :key="item.id" class="w-[200px] h-[200px]"/>
+            <TheFooterItem v-for="item in pageCompanies" :link="item" :key="item.id" class="w-[100px] h-[50px] mb-[100px]"/>
         </section>
 
     </div>
