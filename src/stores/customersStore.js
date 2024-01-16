@@ -57,5 +57,45 @@ export const useCustomersStore = defineStore('customersStore', () => {
 
     ])
 
-    return {commonCustomersListItems, commonCustomersListRules}
+    const commonQAList = ref([
+
+        {
+            id:1,
+            text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat lectus turpis mollis nulla arcu. Metus sagittis nulla dolor nibh facilisi ornare. Aliquam ut quis viverra nibh purus suscipit. Enim sem massa tortor consectetur sagittis semper blandit ut nisl. Scelerisque urna, rutrum suspendisse amet gravida. Semper massa eget ut justo, nascetur aliquam id ipsum.',
+            label: 'Lorem ipsum dolor sit amet',
+        },
+
+        {
+            id:2,
+            text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat lectus turpis mollis nulla arcu. Metus sagittis nulla dolor nibh facilisi ornare. Aliquam ut quis viverra nibh purus suscipit. Enim sem massa tortor consectetur sagittis semper blandit ut nisl. Scelerisque urna, rutrum suspendisse amet gravida. Semper massa eget ut justo, nascetur aliquam id ipsum.',
+            label: 'Lorem ipsum dolor sit amet',
+        },
+
+        {
+            id:3,
+            text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat lectus turpis mollis nulla arcu. Metus sagittis nulla dolor nibh facilisi ornare. Aliquam ut quis viverra nibh purus suscipit. Enim sem massa tortor consectetur sagittis semper blandit ut nisl. Scelerisque urna, rutrum suspendisse amet gravida. Semper massa eget ut justo, nascetur aliquam id ipsum.',
+            label: 'Lorem ipsum dolor sit amet',
+        },
+
+        {
+            id:4,
+            text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat lectus turpis mollis nulla arcu. Metus sagittis nulla dolor nibh facilisi ornare. Aliquam ut quis viverra nibh purus suscipit. Enim sem massa tortor consectetur sagittis semper blandit ut nisl. Scelerisque urna, rutrum suspendisse amet gravida. Semper massa eget ut justo, nascetur aliquam id ipsum.',
+            label: 'Lorem ipsum dolor sit amet',
+        },
+
+        {
+            id:5,
+            text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat lectus turpis mollis nulla arcu. Metus sagittis nulla dolor nibh facilisi ornare. Aliquam ut quis viverra nibh purus suscipit. Enim sem massa tortor consectetur sagittis semper blandit ut nisl. Scelerisque urna, rutrum suspendisse amet gravida. Semper massa eget ut justo, nascetur aliquam id ipsum.',
+            label: 'Lorem ipsum dolor sit amet',
+        },
+
+        {
+            id:6,
+            text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat lectus turpis mollis nulla arcu. Metus sagittis nulla dolor nibh facilisi ornare. Aliquam ut quis viverra nibh purus suscipit. Enim sem massa tortor consectetur sagittis semper blandit ut nisl. Scelerisque urna, rutrum suspendisse amet gravida. Semper massa eget ut justo, nascetur aliquam id ipsum.',
+            label: 'Lorem ipsum dolor sit amet',
+        }
+
+    ])
+
+    return {commonCustomersListItems, commonCustomersListRules, commonQAList}
 })

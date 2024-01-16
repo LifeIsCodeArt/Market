@@ -3,6 +3,7 @@
 
     import ElementOfTheList from '../components/Customers/ElementOfTheList.vue'
     import ElementOfTheRules from '../components/Customers/ElementOfTheRules.vue'
+    import ElementOfTheQA from '../components/Customers/ElementOfTheQA.vue'
 
     import {computed, ref} from "vue";
 
@@ -11,6 +12,7 @@
 
     const retailListItem = computed(() => store.commonCustomersListItems)
     const customersListRulesItem = computed(() => store.commonCustomersListRules)
+    const customersListQAItem = computed(() => store.commonQAList)
 
     const activeSection = ref(1)
 
@@ -25,11 +27,11 @@
 
         <div class="flex mr-[20px]">
 
-            <ul class="w-[300px]">
-            <ElementOfTheList v-for="item in retailListItem" :key="item.id" :item="item" @click="activeSection = item.id"/>
+            <ul class="w-[300px] h-auto">
+            <ElementOfTheList v-for="item in retailListItem" :key="item.id" :item="item" @click="activeSection = item.id" :class="{'disabled:cursor-not-allowed  pointer-events-none text-white bg-[#4174CB] border-r-2 border-r-[#FFB745]':activeSection === item.id,}"/>
             </ul>
 
-            <div class="">
+            <div class="ml-[20px] w-[860px]">
 
               <section v-if="activeSection === 1" class="flex flex-col">
 
@@ -223,28 +225,29 @@
               <section v-if="activeSection === 4" class="flex flex-col">
 
                   <h1 class="font-normal font-roboto text-[32px] text-[#333333] leading-normal">
-                      Как сделать заказ
+                      Вопросы и ответы
                   </h1>
+                  
+                  <p class="mt-[24px] mb-[28px] font-normal font-roboto text-[14px] text-[#333333] leading-normal">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat lectus turpis mollis nulla arcu.
+                      Metus sagittis nulla dolor nibh facilisi ornare. Aliquam ut quis viverra nibh purus suscipit.
+                      Enim sem massa tortor consectetur sagittis semper blandit ut nisl.
+                      Scelerisque urna, rutrum suspendisse amet gravida. Semper massa eget ut justo, nascetur aliquam id ipsum.
+                  </p>
 
-                  <p class="mt-[24px] mb-[17.5px] text-[#4174CB] text-[18px] font-semibold font-roboto leading-normal">Заказ можно оформить в несколько шагов, ничего сложного.</p>
+                  <div class="flex flex-col">
 
-                  <ol class="">
-                    <ElementOfTheRules v-for="item in customersListRulesItem" :key="item.id" :item="item" />
-                  </ol>
+                  <ElementOfTheQA v-for="item in customersListQAItem" :item="item" :key="item.id"/>
+
+                  </div>
 
               </section>
 
-              <section v-if="activeSection === 1" class="flex flex-col">
+              <section v-if="activeSection === 5" class="flex flex-col">
 
                   <h1 class="font-normal font-roboto text-[32px] text-[#333333] leading-normal">
-                      Как сделать заказ
+                      Политика конфиденциальности и защиты персональных данных
                   </h1>
-
-                  <p class="mt-[24px] mb-[17.5px] text-[#4174CB] text-[18px] font-semibold font-roboto leading-normal">Заказ можно оформить в несколько шагов, ничего сложного.</p>
-
-                  <ol class="">
-                      <ElementOfTheRules v-for="item in customersListRulesItem" :key="item.id" :item="item" />
-                  </ol>
 
               </section>
             </div>
