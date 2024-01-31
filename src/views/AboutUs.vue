@@ -5,7 +5,7 @@
  import AboutComment from '../components/AboutPage/AboutComment.vue'
  import AboutCertificate from '../components/AboutPage/AboutCertificate.vue'
 
- import TheFooterItem from '../components/TheFooterIcon.vue'
+ import TheFooterItem from '../components/TheCommonIcon.vue'
 
  import {useAboutItemsStore} from '../stores/aboutStore.js'
 

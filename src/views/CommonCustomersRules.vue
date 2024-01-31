@@ -36,7 +36,7 @@
               <section v-if="activeSection === 1" class="flex flex-col">
 
                   <h1 class="font-normal font-roboto text-[32px] text-[#333333] leading-normal">
-                      Как сделать заказ
+                      Возврат товара
                   </h1>
 
                   <p class="mt-[24px] mb-[17.5px] text-[#4174CB] text-[18px] font-semibold font-roboto leading-normal">Заказ можно оформить в несколько шагов, ничего сложного.</p>
@@ -66,7 +66,7 @@
 
                   </div>
 
-                  <div class="">
+                  <div class="mt-[58px]">
 
                       <h1 class="font-normal font-roboto text-[32px] text-[#333333] leading-normal">
                           Оплата
@@ -125,7 +125,7 @@
 
                             <input type="text" class="" placeholder="Имя">
 
-                            <input type="number" class="" placeholder="Фамилия">
+                            <input type="text" class="" placeholder="Фамилия">
 
                             <input type="text" class="" placeholder="Телефон">
 
@@ -209,11 +209,11 @@
 
                           <div class="mt-[32px] mb-[16px]">
 
-                              <h1 class="text-[#4174CB] font-bold font-roboto text-[20px] leading-normal mb-[16px]">
-                                  Причины возврата
+                              <h1 class=" font-normal font-roboto text-[20px] leading-normal mb-[16px]">
+                                  Опишите причину возврата
                               </h1>
 
-                              <textarea placeholder="Описание дефектов...." name="" id="">
+                              <textarea placeholder="Описание дефектов...." name="" id="" aria-placeholder="Описание товара" class="w-full px-[16px] py-[16px] h-auto border-b-4 border-gray-200">
 
                               </textarea>
                           </div>

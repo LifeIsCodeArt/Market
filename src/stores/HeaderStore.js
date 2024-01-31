@@ -1,4 +1,4 @@
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useHeaderItemsStore = defineStore('headerItems', () => {
@@ -11,7 +11,7 @@ export const useHeaderItemsStore = defineStore('headerItems', () => {
 
     {id:2,
      text:'Розничным покупателям',
-     link:'/private',
+     link:'/retails',
     },
 
     {id:3,

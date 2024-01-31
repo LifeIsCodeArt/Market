@@ -1,5 +1,5 @@
 <script setup>
-  import TheFooterItem from '../components/TheFooterIcon.vue'
+  import TheImage from '../components/TheCommonIcon.vue'
   import HomePageTemplates from '../components/HomePage/HomePageTemplates.vue'
   import HomePageBenefits from '../components/HomePage/HomePageBenefits.vue'
 
@@ -60,15 +60,14 @@
                 <p class="mt-[24px] mb-[34px] text-white font-roboto font-thin leading-normal text-[24px]">В случае заинтересованности готовы направить вам прайс-лист с оптовыми ценами</p>
 
                 <div class="flex w-[500px] h-[40px]">
-                    <input type="text" placeholder="Введите Ваш E-mail" class="w-[360px] pl-[16px] flex items-center">
+                    <input type="text" placeholder="Введите Ваш E-mail" class="w-[360px] pl-[16px] flex items-center border border-blue-400 focus:outline-none">
                     <button class="flex justify-center items-center w-[104px] bg-[#4174CB] text-white rounded">Найти</button>
                 </div>
             </div>
         </section>
 
-
-        <section class="mt-[136px] mb-[208px] pl-[130px] pr-[166px] grid grid-cols-3 gap-4">
-            <TheFooterItem v-for="item in pageCompanies" :link="item" :key="item.id" class="w-[100px] h-[50px] mb-[100px]"/>
+        <section class="mt-[136px] mb-[108px]  grid grid-cols-3 place-items-center gap-32">
+            <TheImage v-for="item in pageCompanies" :link="item" :key="item.id" class="w-[100px] h-[50px] mb-[100px] justify-center"/>
         </section>
 
     </div>

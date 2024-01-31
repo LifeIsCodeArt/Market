@@ -1,5 +1,5 @@
 <script setup>
-import TheFooterItem from '../components/TheFooterIcon.vue'
+import TheFooterItem from './TheCommonIcon.vue'
 import {useFooterItemsStore} from '../stores/FooterStore.js'
 import {computed} from "vue";
 
@@ -48,7 +48,7 @@ const storeCards = computed(() => store.footerCards)
                     <ul class="flex flex-col text-[#BDBDBD]">
 
                       <li class="font-roboto font-normal leading-normal text-[14px]">
-                         О компании
+                      <RouterLink to="/Information">О компании</RouterLink>
                       </li>
 
                       <li class="font-roboto font-normal leading-normal text-[14px] mt-[8px]">
