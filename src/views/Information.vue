@@ -3,7 +3,7 @@
 import {useInformationStore} from '../stores/informationStore.js'
 
 import ElementOfTheList from '../components/Information/ElementOfTheList.vue'
-import SportJournal from '../components/Information/SportJournal.vue'
+import SportJournal from '../components/Information/sportJournal.vue'
 
 import {computed, ref} from "vue";
 

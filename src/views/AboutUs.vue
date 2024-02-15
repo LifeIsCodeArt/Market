@@ -91,7 +91,7 @@
                       </p>
 
                       <p class="font-normal font-bold font-roboto text-[18px] text-[#333333] leading-normal">
-                          +7 (904) 766-18-43
+                          +38 (063) 766-18-43
                       </p>
 
                   </div>
@@ -104,7 +104,9 @@
                   </h2>
 
                   <ul class="flex justify-between items-center">
-                    <TheFooterItem v-for="icon in aboutIcons" :link="icon" :key="icon.id" class="h-[28px] w-[28px]"/>
+
+                     <TheFooterItem v-for="icon in aboutIcons" :link="icon" :key="icon.id" class="h-[28px] w-[28px]"/>
+
                   </ul>
               </div>
 
