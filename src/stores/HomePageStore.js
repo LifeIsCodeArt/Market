@@ -160,10 +160,31 @@ export const useHomePageItemsStore = defineStore('homePageItems', () => {
             link:'../src/assets/icons/homepage-companies/company_12.png',
         },
 
+    ])
 
+    const carouselImages = ref([
 
+        {
+            id: 1,
+            path: '../src/assets/images/homepage-carousel/image_1.png'
+        },
+
+        {
+            id: 2,
+            path: '../src/assets/images/homepage-carousel/image_2.jpg'
+        },
+
+        {
+            id: 3,
+            path: '../src/assets/images/homepage-carousel/image_3.jpg'
+        },
+
+        {
+            id: 4,
+            path: '../src/assets/images/homepage-carousel/image_2.jpg'
+        }
 
     ])
 
-    return {homePageTemplates, homePageBenefits, homePageCompanies}
+    return {homePageTemplates, homePageBenefits, homePageCompanies, carouselImages }
 })

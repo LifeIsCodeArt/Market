@@ -2,6 +2,7 @@
   import TheImage from '../components/TheCommonIcon.vue'
   import HomePageTemplates from '../components/HomePage/HomePageTemplates.vue'
   import HomePageBenefits from '../components/HomePage/HomePageBenefits.vue'
+  import Carousel from '../components/HomePage/Carousel.vue'
 
   import {useHomePageItemsStore} from '../stores/HomePageStore.js'
   import {computed} from "vue";
@@ -15,9 +16,7 @@
 <template >
     <div class="w-[1440px] px-[130px] h-auto mt-[15px] my-0 mx-auto">
 
-        <section class="">
-            <img src="../assets/images/homepage-carousel/image_1.png" alt="" class="w-full">
-        </section>
+        <Carousel/>
 
 
         <section class="my-[100px]">
